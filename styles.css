@@ -42,6 +42,11 @@ body {
   letter-spacing: 3px;
 }
 
+.time-display {
+  font-weight: bolder;
+  font-size: 60px;
+}
+
 /* Media query for smaller screens */
 @media (max-width: 768px) {
   .container {
@@ -58,5 +63,9 @@ body {
     width: 105px;
     height: 90px;
     margin: 10px;
+  }
+
+  .time-display {
+    font-size: 30px;
   }
 }
