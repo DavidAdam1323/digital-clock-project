@@ -13,4 +13,24 @@ function updateDigitalClock() {
   let hoursValue = now.getHours();
   let minutesValue = now.getMinutes();
   let secondsValue = now.getSeconds();
+
+  // Format hours to display with leading zero if less than 10
+  let formattedHours = hoursValue < 10 ? `0${hoursValue}` : hoursValue;
+
+  // Format minutes to display with leading zero if less than 10
+  let formattedMinutes = minutesValue < 10 ? `0${minutesValue}` : minutesValue;
+
+  // Format seconds to display with leading zero if less than 10
+  let formattedSeconds = secondsValue < 10 ? `0${secondsValue}` : secondsValue;
+
+  // Update the DOM elements with the formatted time values;
+  hours.textContent = formattedHours;
+  minutes.textContent = formattedMinutes;
+  seconds.textContent = formattedSeconds;
 }
+
+// Initial call to update the clock when the page loads
+updateDigitalClock();
+
+// Set interval to update the clock every second (1000 milliseconds)
+setInterval(updateDigitalClock, 1000);
